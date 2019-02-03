@@ -10,11 +10,13 @@ class Cfiles < Formula
   depends_on "make"
 
   def install
-    inreplace "config.h", "xdg-open", "open"
-    inreplace "config.h", "/usr/local/displayimg_uberzug", "#{bin}/displayimg_uberzug"
-    inreplace "config.h", "/usr/local/clearimg_uberzug", "#{bin}/clearimg_uberzug"
-    inreplace "Makefile", "gcc", "cc"
-    inreplace "Makefile", "-lncursesw", "-lncurses"
+    inreplace "config.h" do |s|
+        s.gsub! "xdg-open", "open"
+        s.gsub! "/usr/local/displayimg_uberzug", "#{bin}/displayimg_uberzug"
+        s.gsub! "/usr/local/clearimg_uberzug", "#{bin}/clearimg_uberzug"
+    inreplace "Makefile" do |s|
+        s.gsub! "gcc", "cc"
+        s.gsub! "-lncursesw", "-lncurses"
 
     system "make"
 
