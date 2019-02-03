@@ -7,7 +7,9 @@ class Cfiles < Formula
 
   depends_on "ncurses"
   depends_on "fzf"
-  depends_on "make"
+  depends_on "make" => :build
+  depends_on "atool" => :optional
+  depends_on "mediainfo" => :optional
 
   def install
     inreplace "config.h" do |s|
@@ -20,6 +22,7 @@ class Cfiles < Formula
         s.gsub! "-lncursesw", "-lncurses"
     end
 
+    system "vim","config.h"
     system "make"
 
     bin.install "scripts/displayimg_uberzug"
