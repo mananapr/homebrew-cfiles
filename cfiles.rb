@@ -1,4 +1,4 @@
-class cfiles < Formula
+class Cfiles < Formula
   desc "ncurses file manager written in C"
   homepage "https://github.com/mananapr/cfiles"
   url "https://github.com/mananapr/cfiles/archive/v1.2.tar.gz"
