@@ -16,10 +16,10 @@ class Cfiles < Formula
 
     system "make"
 
-    system "install","-Dm755","scripts/displayimg","/usr/local/bin/displayimg"
-    system "install","-Dm755","scripts/clearimg","/usr/local/bin/clearimg"
-    system "install","-Dm755","scripts/displayimg_uberzug","/usr/local/bin/displayimg_uberzug"
-    system "install","-Dm755","scripts/clearimg_uberzug","/usr/local/bin/clearimg_uberzug"
+    system "install","-dm755","scripts/displayimg","/usr/local/bin/displayimg"
+    system "install","-dm755","scripts/clearimg","/usr/local/bin/clearimg"
+    system "install","-dm755","scripts/displayimg_uberzug","/usr/local/bin/displayimg_uberzug"
+    system "install","-dm755","scripts/clearimg_uberzug","/usr/local/bin/clearimg_uberzug"
 
     bin.install "cfiles"
     man1.install "cfiles.1"
