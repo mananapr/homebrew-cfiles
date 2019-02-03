@@ -12,8 +12,8 @@ class Cfiles < Formula
   def install
     inreplace "config.h" do |s|
         s.gsub! "xdg-open", "open"
-        s.gsub! "/usr/local/displayimg_uberzug", "#{bin}/displayimg_uberzug"
-        s.gsub! "/usr/local/clearimg_uberzug", "#{bin}/clearimg_uberzug"
+        s.gsub! "/usr/local/bin/displayimg_uberzug", "#{bin}/displayimg_uberzug"
+        s.gsub! "/usr/local/bin/clearimg_uberzug", "#{bin}/clearimg_uberzug"
     end
     inreplace "Makefile" do |s|
         s.gsub! "gcc", "cc"
