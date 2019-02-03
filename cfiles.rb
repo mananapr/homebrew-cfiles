@@ -11,16 +11,17 @@ class Cfiles < Formula
 
   def install
     inreplace "config.h", "xdg-open", "open"
+    inreplace "config.h", "/usr/local/displayimg_uberzug", "#{bin}/displayimg_uberzug"
+    inreplace "config.h", "/usr/local/clearimg_uberzug", "#{bin}/clearimg_uberzug"
     inreplace "Makefile", "gcc", "cc"
     inreplace "Makefile", "-lncursesw", "-lncurses"
 
     system "make"
 
-    system "install","-m755","scripts/displayimg","/usr/local/bin/displayimg"
-    system "install","-m755","scripts/clearimg","/usr/local/bin/clearimg"
-    system "install","-m755","scripts/displayimg_uberzug","/usr/local/bin/displayimg_uberzug"
-    system "install","-m755","scripts/clearimg_uberzug","/usr/local/bin/clearimg_uberzug"
-
+    bin.install "scripts/displayimg_uberzug"
+    bin.install "scripts/displayimg"
+    bin.install "scripts/clearimg_uberzug"
+    bin.install "scripts/clearimg"
     bin.install "cfiles"
     man1.install "cfiles.1"
   end
