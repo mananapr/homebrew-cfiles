@@ -22,7 +22,6 @@ class Cfiles < Formula
         s.gsub! "-lncursesw", "-lncurses"
     end
 
-    system "vim","config.h"
     system "make"
 
     bin.install "scripts/displayimg_uberzug"
