@@ -1,8 +1,8 @@
 class Cfiles < Formula
   desc "ncurses file manager written in C"
   homepage "https://github.com/mananapr/cfiles"
-  url "https://github.com/mananapr/cfiles/archive/v1.3.tar.gz"
-  sha256 "abf4759019934bdb163ffb43083ad72fcb4c9ae5147eb42b6fd689a2811792cc"
+  url "https://github.com/mananapr/cfiles/archive/v1.4.tar.gz"
+  sha256 "8d4eb7f9674c632cb827878a0e9c72b16e57275798208496bcd8134c546e77da"
   revision 1
 
   depends_on "ncurses"
