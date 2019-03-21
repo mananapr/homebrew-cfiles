@@ -5,9 +5,7 @@ class Cfiles < Formula
   sha256 "8d4eb7f9674c632cb827878a0e9c72b16e57275798208496bcd8134c546e77da"
   revision 1
 
-  depends_on "ncurses"
   depends_on "fzf"
-  depends_on "make" => :build
   depends_on "atool" => :optional
   depends_on "mediainfo" => :optional
 
