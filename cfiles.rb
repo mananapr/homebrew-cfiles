@@ -1,8 +1,8 @@
 class Cfiles < Formula
   desc "ncurses file manager written in C"
   homepage "https://github.com/mananapr/cfiles"
-  url "https://github.com/mananapr/cfiles/archive/v1.7.1.tar.gz"
-  sha256 "db456619024a1a6d05a381917ea28c055d3e1eba06837bd0b70d3ccc4aa34dd6"
+  url "https://github.com/mananapr/cfiles/archive/v1.7.2.tar.gz"
+  sha256 "65f141e1deef8fec0bd35264a3837d98fd59fcb993d117deeb0a0a4b9543e383"
   revision 1
 
   depends_on "fzf"
@@ -12,8 +12,8 @@ class Cfiles < Formula
   def install
     inreplace "config.h" do |s|
         s.gsub! "xdg-open", "open"
-        s.gsub! "/usr/local/bin/displayimg_uberzug", "#{bin}/displayimg_uberzug"
-        s.gsub! "/usr/local/bin/clearimg_uberzug", "#{bin}/clearimg_uberzug"
+        s.gsub! "/usr/share/cfiles/scripts/displayimg_uberzug", "#{bin}/displayimg_uberzug"
+        s.gsub! "/usr/share/cfiles/scripts/clearimg_uberzug", "#{bin}/clearimg_uberzug"
     end
     inreplace "Makefile" do |s|
         s.gsub! "gcc", "cc"
