@@ -17,7 +17,7 @@ class Cfiles < Formula
     end
     inreplace "Makefile" do |s|
         s.gsub! "gcc", "cc"
-        s.gsub! "-lncursesw", "-lncurses"
+        s.gsub! "ncursesw", "ncurses"
     end
 
     system "make"
