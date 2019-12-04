@@ -3,9 +3,10 @@ class Cfiles < Formula
   homepage "https://github.com/mananapr/cfiles"
   url "https://github.com/mananapr/cfiles/archive/v1.8.tar.gz"
   sha256 "c5f8111df59496aafd817af0b7c7dcf7177bc4baa84b03ddf0912ef69f4be8f6"
-  revision 1
+  revision 2
 
   depends_on "fzf"
+  depends_on "pkg-config"
   depends_on "atool" => :optional
   depends_on "mediainfo" => :optional
 
